@@ -7,5 +7,16 @@
 package iuh.fit.cs;
 
 public enum KichCo {
-	NHO,VUA,LON
+	NHO("Nhỏ"),
+	VUA("Vừa"),
+	LON("Lớn");
+	private String kichCo;
+	private KichCo(String kichCo) {
+		this.kichCo = kichCo;
+	}
+	@Override
+	public String toString() {
+		return kichCo;
+	}
 }
+
