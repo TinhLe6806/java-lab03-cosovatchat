@@ -7,22 +7,27 @@
 package iuh.fit.cs;
 
 class Ghe extends CoSoVatChat {
-	private boolean coTuGhe;
-	private int soChan;
-	public double nangNangCuaTuaGhe () {
-		return coTuGhe ? 20 : 0;
-	}
-	public double canNang () {
-		return soChan*10 + nangNangCuaTuaGhe();
-	}
-	public Ghe(String ma, iuh.fit.cs.ChatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan, boolean coTuGhe) {
-		super(ma, chatLieu, kichCo, soChan);
-		this.coTuGhe = coTuGhe;
-		this.soChan = soChan;
-	}
-	public Ghe(String ma, iuh.fit.cs.ChatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan) {
-		super(ma, chatLieu, kichCo, soChan);
-	}
-	
-	
+		private boolean coTuaGhe;
+		
+		public Ghe(String ma, ChatLieu chatLieu, KichCo kichCo, int soChan, boolean coTuaGhe) {
+			super(ma, chatLieu, kichCo, soChan);
+			setCoTuaGhe(coTuaGhe);;
+		}
+		public boolean isCoTuaGhe() {
+			return coTuaGhe;
+		}
+		public void setCoTuaGhe(boolean coTuaGhe) {
+			this.coTuaGhe = coTuaGhe;
+		}
+		@Override
+		public double canNang() {
+			int nangNangCuaTuaGhe = coTuaGhe ? 20 : 0;
+			return getSoChan() * 10 + nangNangCuaTuaGhe;
+ 		}
+		
+		
+		@Override
+		public String toString() {
+		return String.format("%-8s %-10s %-10s %8s %-12s %10s",getMa(),getChatLieu(),getKichCo(),getSoChan(),coTuaGhe ? "Có" : "Không",canNang());
+		}
 }
