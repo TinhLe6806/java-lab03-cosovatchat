@@ -6,6 +6,6 @@
  */
 package iuh.fit.cs;
 
-public enum chatLieu {
+public enum ChatLieu {
 		GO,NHUA,KIMLOAI
 }
