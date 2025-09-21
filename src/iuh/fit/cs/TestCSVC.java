@@ -9,13 +9,13 @@ package iuh.fit.cs;
 public class TestCSVC {
 
 	public static void main(String[] args) {
-		Ban ban1 = new Ban("B001",chatLieu.GO, kichCo.VUA, 4, 10.5, 5, 0);
-		Ban ban2 = new Ban("B002",chatLieu.KIMLOAI, kichCo.NHO, 6, 5.5, 5, 0);
-		Ban ban3 = new Ban("B003",chatLieu.NHUA, kichCo.LON, 10, 10.5, 5, 0);
+		Ban ban1 = new Ban("B001",ChatLieu.GO, kichCo.VUA, 4, 10.5, 5, 0);
+		Ban ban2 = new Ban("B002",ChatLieu.KIMLOAI, kichCo.NHO, 6, 5.5, 5, 0);
+		Ban ban3 = new Ban("B003",ChatLieu.NHUA, kichCo.LON, 10, 10.5, 5, 0);
 		
-		Ghe ghe1 = new Ghe("G001", chatLieu.GO, kichCo.VUA, 4, true);
-		Ghe ghe2 = new Ghe("G002", chatLieu.KIMLOAI, kichCo.LON, 5, false);
-		Ghe ghe3 = new Ghe("G003", chatLieu.NHUA, kichCo.NHO, 6, true);
+		Ghe ghe1 = new Ghe("G001", ChatLieu.GO, kichCo.VUA, 4, true);
+		Ghe ghe2 = new Ghe("G002", ChatLieu.KIMLOAI, kichCo.LON, 5, false);
+		Ghe ghe3 = new Ghe("G003", ChatLieu.NHUA, kichCo.NHO, 6, true);
 		
 		System.out.println("Mã: " + ban1.getMa());
 		System.out.println("Số chân: " + ban1.getSoChan());
