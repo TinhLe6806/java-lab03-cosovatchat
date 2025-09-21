@@ -7,5 +7,15 @@
 package iuh.fit.cs;
 
 public enum ChatLieu {
-		GO,NHUA,KIMLOAI
+	GO("Gỗ"),
+	NHUA("Nhựa"),
+	KIMLOAI("Kim loại");
+	private String chatLieu;
+	private ChatLieu(String chatLieu) {
+		this.chatLieu = chatLieu;
+	}
+	@Override
+	public String toString() {
+		return chatLieu;
+	}
 }
