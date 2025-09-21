@@ -8,8 +8,8 @@ package iuh.fit.cs;
 
 abstract class CoSoVatChat {
 	private String ma;
-	private chatLieu chatLieu;
-	private kichCo kichCo;
+	private ChatLieu chatLieu;
+	private KichCo kichCo;
 	private int soChan;
 	public abstract double canNang();
 	public String getMa() {
@@ -21,17 +21,20 @@ abstract class CoSoVatChat {
 		}
 		this.ma = ma;
 	}
-	public chatLieu getChatLieu() {
+	public ChatLieu getChatLieu() {
 		return chatLieu;
 	}
-	public void setChatLieu(chatLieu chatLieu) {
+	public void setChatLieu(ChatLieu chatLieu) {
+		if(!(chatLieu instanceof ChatLieu)) {
+			throw new IllegalArgumentException("Chat lieu khong hop le");
+		}
 		this.chatLieu = chatLieu;
 	}
-	public kichCo getKichCo() {
+	public KichCo getKichCo() {
 		return kichCo;
 	}
-	public void setKichCo(kichCo kichCo) {
-		if(kichCo == null) {
+	public void setKichCo(KichCo kichCo) {
+		if(!(kichCo instanceof KichCo)) {
 			throw new IllegalArgumentException("Kich co khong duoc null");
 		}
 		this.kichCo = kichCo;
@@ -45,15 +48,12 @@ abstract class CoSoVatChat {
 		}
 		this.soChan = soChan;
 	}
-	public CoSoVatChat(String ma, iuh.fit.cs.chatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan) {
+	public CoSoVatChat(String ma, iuh.fit.cs.ChatLieu chatLieu, iuh.fit.cs.KichCo kichCo, int soChan) {
 		setChatLieu(chatLieu);
 		setKichCo(kichCo);
 		setMa(ma);
 		setSoChan(soChan);
 	}
-	@Override
-	public String toString() {
-		return String.format("%-10s %-10s %10s %5s %10s", ma,chatLieu,kichCo,soChan,canNang());
-	}
-	
+
 }
+
