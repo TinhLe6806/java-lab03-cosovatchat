@@ -15,12 +15,12 @@ class Ghe extends CoSoVatChat {
 	public double canNang () {
 		return soChan*10 + nangNangCuaTuaGhe();
 	}
-	public Ghe(String ma, iuh.fit.cs.chatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan, boolean coTuGhe) {
+	public Ghe(String ma, iuh.fit.cs.ChatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan, boolean coTuGhe) {
 		super(ma, chatLieu, kichCo, soChan);
 		this.coTuGhe = coTuGhe;
 		this.soChan = soChan;
 	}
-	public Ghe(String ma, iuh.fit.cs.chatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan) {
+	public Ghe(String ma, iuh.fit.cs.ChatLieu chatLieu, iuh.fit.cs.kichCo kichCo, int soChan) {
 		super(ma, chatLieu, kichCo, soChan);
 	}
 	
