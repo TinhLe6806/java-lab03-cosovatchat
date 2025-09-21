@@ -6,6 +6,6 @@
  */
 package iuh.fit.cs;
 
-public enum kichCo {
+public enum KichCo {
 	NHO,VUA,LON
 }
